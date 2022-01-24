@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import * as Leaf from 'leaflet';
 
 @Component({
@@ -11,8 +11,8 @@ export class OverviewMapComponent implements AfterViewInit {
 
   private initMap(): void {
     this.map = Leaf.map('map', {
-      center: [ 39.8282, -98.5795 ],
-      zoom: 3
+      center: [ 50.935173, 6.953101 ],
+      zoom: 12
     });
 
     const tiles = Leaf.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -28,5 +28,26 @@ export class OverviewMapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
+  }
+
+  public screenWidth: any;
+  public screenHeight: any;
+  public relMapWidth: any;
+  public relMapHeight: any;
+  
+  ngOnInit() {
+      this.screenWidth = window.innerWidth;
+      this.screenHeight = window.innerHeight;
+
+      this.relMapWidth = this.screenWidth-100; 
+      this.relMapHeight = this.screenHeight-100; 
+    }
+  
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+    this.relMapWidth = this.screenWidth-100; 
+    this.relMapHeight = this.screenHeight-100; 
   }
 }
