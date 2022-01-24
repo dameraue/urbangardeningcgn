@@ -1,13 +1,25 @@
 .map-container {
   height:400px;
-  width:600px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-  
   }
-  
+  @media screen and (min-width:1400px) {
+    .map-container {
+      min-width:1200px; 
+      }
+  }
+  @media screen and (min-width:700px) {
+    .map-container {
+      min-width:600px; 
+      }
+  }
+  @media screen and (max-width:699px) {
+    .map-container {
+      min-width:300px; 
+      }
+  }
   .map-frame {
     border: 2px solid #6B9F25;
   width:100%;
