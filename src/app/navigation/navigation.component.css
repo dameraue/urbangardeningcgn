@@ -35,13 +35,14 @@ a.navigation:link {
     a.navigation:link {
             color:#fff;
             background:#F7A826;
+        
             padding:.5em 1em .5em 1em;
             border-radius: 5px;
             text-decoration:none;
             display:block;
         }
 a.navigation:link:hover {
-        background:#F8BB56;      
+        background:rgb(253, 194, 99);      
     }
 a.navigation:link:visited, a.navigation:link:focus, a.navigation:link:active, a {
     color:#fff;
