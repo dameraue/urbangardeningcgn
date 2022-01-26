@@ -1,6 +1,7 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, 'Lato', sans-serif, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
@@ -45,9 +46,10 @@ height:500px;
     right: 0;
 height:50px;
 margin:0;
+
     display: flex;
     align-items: center;
-    background-color: #6B9F25;
+    background-color: #50B053;
     color: white;
    
   }
@@ -75,9 +77,10 @@ margin:0;
     display: flex;
     margin: 82px auto 32px;
     padding: 0 16px;
-    max-width: 960px;
+    /*max-width: 960px;
+     align-items: center;*/
     flex-direction: column;
-    align-items: center;
+   
   
   }
 
@@ -309,45 +312,45 @@ margin:0;
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar" role="banner" [ngStyle]="{'width.px':screenWidth}">
   <img
-    width="40"
+   
     height="40"
     alt="Logo"
     background="none"
-    src="../assets/images/logo.png"
+    src="../assets/images/logo_loewenzahn_cgn.png"
   />
-  <span>Welcome to Urban Gardening Cologne</span>
+  <span><!-- possible text
+  --></span>
     <div class="spacer"></div>
-    <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+   <!-- <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
     Link
     </a>
     <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
     Link 
     </a>
+    -->
 </div>
 
 
-<div class="content" role="main">
+<div class="content" role="main" >
   <app-navigation></app-navigation>
-<app-overview-map></app-overview-map>
+  <router-outlet></router-outlet>
+
 
   <!-- Resources -->
-  <h2>Subject 2</h2>
-  <p>Content following</p>
-
-
 
   
 
  
   <!-- Footer -->
-  <footer>
-  <p>Imprint</p> 
-  </footer>
+ 
 
  
 
 </div>
 
-<router-outlet></router-outlet>
+
+<footer>
+  <p>Imprint</p> 
+  </footer>

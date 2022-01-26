@@ -33,16 +33,15 @@ a.navigation:link {
  }
     }
     a.navigation:link {
-            color:#9F6715;
-            background:#2683C6;
-            padding:.5em 1em .5em 1em;
             color:#fff;
+            background:#F7A826;
+            padding:.5em 1em .5em 1em;
             border-radius: 5px;
             text-decoration:none;
             display:block;
         }
 a.navigation:link:hover {
-        background:#3494BA;      
+        background:#F8BB56;      
     }
 a.navigation:link:visited, a.navigation:link:focus, a.navigation:link:active, a {
     color:#fff;
